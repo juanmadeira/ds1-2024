@@ -1,0 +1,14 @@
+body {
+    background-attachment: fixed;
+    background-image: url('https://jutipia.neocities.org/img/figure/starsagain.gif');
+    background-position: center;
+    background-size: auto;
+    color: white;
+    display: flex;
+    font-family: "VT-100", fixedsys, System, monospace;
+    font-size: 0.9em;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 1em;
+}
