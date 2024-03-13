@@ -1,0 +1,336 @@
+CRITICAL - 2024-02-28 14:02:12 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:02:12 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:13:24 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:13:24 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:13:30 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:13:30 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:14:09 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:14:09 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:14:18 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:14:18 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:14:33 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:14:33 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:17:02 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:17:02 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:17:03 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:17:03 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:17:13 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:17:13 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:29:51 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:29:51 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:29:55 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:29:55 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:29:56 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:29:56 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:31:42 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:31:42 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-28 14:37:46 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-28 14:37:46 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct()
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle()
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Documents\documentos\ifrs\Desenvolvimento de Sistemas I\1º bimestre\codeigniter4\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

@@ -1,0 +1,13 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    font-family: "VT-100", fixedsys, System, monospace;
+    font-size: 0.85em;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 1em;
+}
