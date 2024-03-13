@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body{
+    background-color: rgb(255, 221, 159);
+}
+
+header{
+    background-image: linear-gradient(to bottom right, red, yellow);
+    margin-bottom: 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 40%;
+}
+
+.head{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.inputAB{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: 1px solid black;
+    width: 100px;
+}
+
+select{
+    border: 1px solid black;
+    width: 100px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+button{
+    width: 50px;
+    align-self: flex-end;
+}
+
+.resultado h1{
+    font-size: 1.5em;
+}
+
+.show, .show2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

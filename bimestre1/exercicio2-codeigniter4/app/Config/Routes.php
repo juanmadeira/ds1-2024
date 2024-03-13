@@ -5,5 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->post('/music', 'Home::receive_data');
+
+$routes->get('/index', 'Home::index');
+$routes->post('/index', 'Home::update');
+$routes->get('/insert_artist', 'Home::insertArtist');

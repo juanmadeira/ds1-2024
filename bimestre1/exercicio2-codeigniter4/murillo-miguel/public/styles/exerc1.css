@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(0, 53, 122);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1{
+    color: rgb(0, 143, 209);
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header h1{
+    margin-left: 40px;
+}
+
+header img{
+    margin-left: 20px;
+    width: 100px;
+    height: 25px;
+}
+
+.form{
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 10px;
+    background-color:rgb(0, 53, 122);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1{
+    color: rgb(6, 176, 255);
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+form{
+    align-self: center;
+    font-family: "Puritan", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+}
+
+form label{
+    color: rgb(178, 212, 228);
+    margin-bottom: 10px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+button[type='submit']{
+    align-self: flex-end;
+}
+
+table{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 800px;
+    height: 100px;
+    padding-inline: 10px;
+    color: white;
+    background-color: rgb(34, 30, 61);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+thead th{
+    color: rgb(191, 245, 255);
+    height: 40px;
+    border-bottom: 1px solid rgb(113, 141, 145);
+}
+
+tr{
+    border-bottom: 1px solid white;
+}
+
+th,td{
+    text-align: start;
+}
+
+.imgContainer{
+    text-align: center;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Neue", cursive, 'Arial';
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background: url('../Images/terrariabg.png');
+}
+
+header{
+    background-color: rgb(54, 148, 255);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1{
+    margin-left: 20px;
+}
+
+.logoimg{
+    justify-self: center;
+    margin-right: 15%;
+}
+
+nav{
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+table{
+    margin: 0 auto;
+    border-spacing: 0px;
+    font-size: 1.8em;
+}
+thead{
+        background-color: gray;
+}
+
+th{
+    border-bottom: 1px solid black;
+    text-align: start;
+    width: 200px;
+}
+
+tbody{
+    background-color: rgba(201, 107, 0, 0.589);
+}
+
+td{
+    border-bottom: 2px solid rgb(83, 20, 4);
+}
+
+#insert{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 1.8em;
+    padding: 20px;
+    background-color: rgba(201, 107, 0, 0.589);
+    border: 2px solid rgb(255, 208, 0);
+    outline: 1px solid black;
+    border-radius: 10px;
+}
+
+#insert input{
+    margin-bottom: 20px;
+    background-color: rgba(0, 163, 14, 0.466);
+        border: 1px solid rgb(35, 110, 0);
+        outline: 1px solid black;
+}
+
+#insert label{
+    margin-bottom: 10px;
+}
+
+#insert button{
+    background: none;
+    border: none;
+    outline: none;
+    align-self: end;
+}
+
+#insert button img{
+    width: 130px;
+    height: 65px;
+}
+
+#insert button img:hover{
+    cursor: pointer;
+}
+
+table button{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+table button:hover{
+    cursor: pointer;
+}
+
+.deleteColumn{
+    width: 30px;
+    height: 30px;
+}
+
+#deleteForm{
+    display: none;    
+}

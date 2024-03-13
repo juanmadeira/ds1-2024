@@ -5,13 +5,19 @@ use App\Models\ArtistasModel;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('index');
+        $artistasModel = new ArtistasModel();
+        
+        $result = $artistasModel->findAll();
+        $data['result'] = $result;
+        return view('index',$data);
     }
     
-    public function receive_data()
+    public function update()
     {
+        $artistasModel = new ArtistasModel();
+
         $data = array(
             'nome' => $this->request->getVar('nome'),
             'bio' => $this->request->getVar('bio'),
@@ -19,12 +25,12 @@ class Home extends BaseController
             'pais' => $this->request->getVar('pais')
         );
 
-        $art_model = new ArtistasModel();
-        $art_model->insert($data);
+        $artistasModel->insert($data);
+        return redirect()->to('index');
+    }
 
-        $result = $art_model->findAll();
-        $data['result'] = $result;
-
-        return view('music',$data);
+    public function insertArtist()
+    {
+        return view('insert_artist');
     }
 }
