@@ -26,7 +26,7 @@ class Home extends BaseController
         );
 
         $artistasModel->insert($data);
-        return redirect()->to('index');
+        return redirect()->to('/');
     }
 
     public function insertArtist()
