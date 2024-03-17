@@ -1,3 +1,5 @@
+@import url('./style.css');
+
 body {
     background-image: url(../img/left-in-the-dark.jpg);
     background-repeat: no-repeat;

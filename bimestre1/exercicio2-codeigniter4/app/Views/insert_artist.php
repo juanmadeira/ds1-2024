@@ -11,26 +11,26 @@
     </head>
     <body>
         <div class="container mt-3">
-        <h2>First.am</h2>
-        <form action="/" method='post'>
-            <div class="mb-3 mt-3">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Insira o nome do artista/banda:" name="nome">
-            </div>
-            <div class="mb-3">
-            <label for="bio">Biografia:</label>
-            <input type="text" class="form-control" id="bio" placeholder="Insira mais detalhes sobre o artista/banda:" name="bio">
-            </div>
-            <div class="mb-3">
-            <label for="gen">Gênero:</label>
-            <input type="text" class="form-control" id="gen" placeholder="Insira o gênero do artista/banda:" name="gen">
-            </div>
-            <div class="mb-3">
-            <label for="pais">País:</label>
-            <input type="text" class="form-control" id="pais" placeholder="Insira o país de fundação do artista/banda:" name="pais">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+            <h2 class="fire">Inserir artista/banda</h2>
+            <form action="/" method='post'>
+                <div class="mb-3 mt-3">
+                    <label for="nome" class="fs-6">Nome:</label>
+                    <input type="text" name="nome" class="form-control form-control-sm" placeholder="Insira o nome do artista/banda:">
+                </div>
+                <div class="mb-3">
+                    <label for="bio" class="fs-6">Biografia:</label>
+                    <input type="text" name="bio" class="form-control form-control-sm" placeholder="Insira mais detalhes sobre o artista/banda:">
+                </div>
+                <div class="mb-3">
+                    <label for="gen" class="fs-6">Gênero:</label>
+                    <input type="text" name="gen" class="form-control form-control-sm" placeholder="Insira o gênero do artista/banda:">
+                </div>
+                <div class="mb-3">
+                    <label for="pais" class="fs-6">País:</label>
+                    <input type="text" name="pais" class="form-control form-control-sm" placeholder="Insira o país de fundação do artista/banda:">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </body>
 </html>
