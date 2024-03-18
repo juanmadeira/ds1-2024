@@ -7,9 +7,27 @@
         <link rel="stylesheet" href="./style/index.css" type="text/css" media="all">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Início | Last.am</title>
+        <title>Início | First.am</title>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="./img/first-am-logo.png" width=150 /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Início</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="insert artist">Inserir artista</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <table class="table d-flex align-items-center justify-content-center">
             <thead class="table-dark">
                 <tr>
