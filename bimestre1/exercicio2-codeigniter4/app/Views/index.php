@@ -28,27 +28,37 @@
                 </div>
             </div>
         </nav>
-        <table class="table d-flex align-items-center justify-content-center">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col" class="text-center">#</th>
-                    <th scope="col" class="text-center">nome</th>
-                    <th scope="col" class="text-center">biografia</th>
-                    <th scope="col" class="text-center">gênero</th>
-                    <th scope="col" class="text-center">país</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    foreach($result as $row){
-                        echo "<tr>";
-                        foreach($row as $value){
-                            echo '<td class="text-center">'.$value.'</td>';
+        <main class="">
+            <table class="table table-responsive w-75 m-auto mt-3 d-block d-md-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">nome</th>
+                        <th class="text-center">biografia</th>
+                        <th class="text-center">gênero</th>
+                        <th class="text-center">país</th>
+                        <th class="text-center">excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        foreach($result as $row){
+                            echo "<tr>";
+                            foreach($row as $value){
+                                echo '<td class="text-center">'.$value.'</td>';
+                            }
+                            echo "<td class='text-center'>
+                                    <form action='delete' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'>❌</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            ";
                         }
-                        echo "</tr>";
-                    }
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </main>
     </body>
 </html>

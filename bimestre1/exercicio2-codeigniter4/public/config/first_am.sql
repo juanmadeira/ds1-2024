@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Mar-2024 às 00:55
+-- Tempo de geração: 19-Mar-2024 às 16:12
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -40,10 +40,8 @@ CREATE TABLE `artistas` (
 --
 
 INSERT INTO `artistas` (`id`, `nome`, `bio`, `gen`, `pais`) VALUES
-(12, 'lupe de lupe', 'sao mineiro', 'noise rock', 'minas gerais'),
-(13, 'my chemical romance', 'sao emo', 'emo', 'world trade center'),
-(14, 'nome', 'bio', 'gen', 'pais'),
-(15, 'nome', 'bio', 'gen', 'pais');
+(1, 'lupe de lupe', 'sao mineiro', 'noise rock', 'minas gerais'),
+(2, 'my chemical romance', 'sao emo', 'emo', 'world trade center');
 
 --
 -- Índices para tabelas despejadas
@@ -64,7 +62,7 @@ ALTER TABLE `artistas`
 -- AUTO_INCREMENT de tabela `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

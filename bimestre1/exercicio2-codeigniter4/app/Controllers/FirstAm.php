@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\ArtistasModel;
 
-class Home extends BaseController
+class FirstAm extends BaseController
 {
     public function index()
     {
@@ -11,7 +11,7 @@ class Home extends BaseController
         
         $result = $artistasModel->findAll();
         $data['result'] = $result;
-        return view('index',$data);
+        return view('/index',$data);
     }
     
     public function update()
@@ -32,5 +32,13 @@ class Home extends BaseController
     public function insertArtist()
     {
         return view('insert_artist');
+    }
+
+    public function delete()
+    {
+        $artistasModel = new ArtistasModel();
+        $id = $this->request->getVar('id');
+        $artistasModel->delete($id);
+        return redirect()->to('/');
     }
 }
