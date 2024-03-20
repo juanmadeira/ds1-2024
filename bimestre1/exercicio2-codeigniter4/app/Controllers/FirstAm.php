@@ -34,11 +34,25 @@ class FirstAm extends BaseController
         return view('insert_artist');
     }
 
+    public function edit()
+    {
+        $id = $this->request->getVar('id');
+        var_dump($this->getDataItem($id));
+        return view('edit_artist',$this->getDataItem($id));
+    }
+
     public function delete()
     {
         $artistasModel = new ArtistasModel();
         $id = $this->request->getVar('id');
         $artistasModel->delete($id);
         return redirect()->to('/');
+    }
+
+    public function getDataItem($id)
+    {
+        $artistasModel = new ArtistasModel();
+        $result = $artistasModel->find($id);
+        return $result;
     }
 }
