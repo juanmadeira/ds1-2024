@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style/index.css" type="text/css" media="all">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="./src/style/index.css">
+        <script defer type="module" src="./src/script/script.js"></script>
         <title>Início | First.am</title>
     </head>
     <body>
@@ -37,6 +36,7 @@
                         <th class="text-center">biografia</th>
                         <th class="text-center">gênero</th>
                         <th class="text-center">país</th>
+                        <th class="text-center">editar</th>
                         <th class="text-center">excluir</th>
                     </tr>
                 </thead>
@@ -48,9 +48,15 @@
                                 echo '<td class="text-center">'.$value.'</td>';
                             }
                             echo "<td class='text-center'>
+                                    <form action='edit' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'><i class='bi bi-pencil-fill' style='color: blue;'></i></button>
+                                    </form>
+                                </td>
+                                <td class='text-center'>
                                     <form action='delete' method='post'>
                                         <input type='hidden' value=".$row['id']." name='id'>
-                                        <button type='submit'>❌</button>
+                                        <button type='submit'><i class='bi bi-trash3-fill' style='color: red;'></i></i></button>
                                     </form>
                                 </td>
                             </tr>
