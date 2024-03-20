@@ -37,7 +37,6 @@ class FirstAm extends BaseController
     public function edit()
     {
         $id = $this->request->getVar('id');
-        var_dump($this->getDataItem($id));
         return view('edit_artist',$this->getDataItem($id));
     }
 
