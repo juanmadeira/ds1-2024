@@ -30,6 +30,8 @@
         <div class="container mt-3">
             <h2 class="fire">Editar artista/banda</h2>
             <form action="/" method='post'>
+                <input type='hidden' name='typeaction' value='update'>
+                <input type='hidden' name='id' value='<?php echo $id ?>'>
                 <div class="mb-3 mt-3">
                     <label for="nome" class="fs-6">Nome:</label>
                     <input type="text" name="nome" class="form-control form-control-sm" placeholder="Insira o nome do artista/banda:" value='<?php echo $nome ?>'>

@@ -17,15 +17,15 @@ class FirstAm extends BaseController
     public function update()
     {
         $artistasModel = new ArtistasModel();
-
+        $id = $this->request->getVar('id');
+        $typeaction = $this->request->getVar('typeaction');
         $data = array(
             'nome' => $this->request->getVar('nome'),
             'bio' => $this->request->getVar('bio'),
             'gen' => $this->request->getVar('gen'),
             'pais' => $this->request->getVar('pais')
         );
-
-        $artistasModel->insert($data);
+        ($typeaction == 'insert')?$artistasModel->insert($data):$artistasModel->update($id, $data);
         return redirect()->to('/');
     }
 
@@ -35,7 +35,7 @@ class FirstAm extends BaseController
     }
 
     public function edit()
-    {
+    {   
         $id = $this->request->getVar('id');
         return view('edit_artist',$this->getDataItem($id));
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Mar-2024 às 16:12
+-- Tempo de geração: 27-Mar-2024 às 00:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -36,14 +36,6 @@ CREATE TABLE `artistas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `artistas`
---
-
-INSERT INTO `artistas` (`id`, `nome`, `bio`, `gen`, `pais`) VALUES
-(1, 'lupe de lupe', 'sao mineiro', 'noise rock', 'minas gerais'),
-(2, 'my chemical romance', 'sao emo', 'emo', 'world trade center');
-
---
 -- Índices para tabelas despejadas
 --
 
@@ -62,7 +54,7 @@ ALTER TABLE `artistas`
 -- AUTO_INCREMENT de tabela `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
