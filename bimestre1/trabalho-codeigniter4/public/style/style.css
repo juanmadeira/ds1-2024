@@ -1,0 +1,127 @@
+/*
+   __     __  __     ______   __     ______   __     ______    
+  /\ \   /\ \/\ \   /\__  _\ /\ \   /\  == \ /\ \   /\  __ \   
+ _\_\ \  \ \ \_\ \  \/_/\ \/ \ \ \  \ \  _-/ \ \ \  \ \  __ \  
+/\_____\  \ \_____\    \ \_\  \ \_\  \ \_\    \ \_\  \ \_\ \_\ 
+\/_____/   \/_____/     \/_/   \/_/   \/_/     \/_/   \/_/\/_/ 
+
+*/
+
+/* * */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dcdcdc;
+    text-decoration: underline;
+}
+
+/* body */
+body {
+    height: 100vh;
+    color: #000000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+    background-color: #a67b5b;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header a {
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.1s;
+}
+
+header a:hover {
+    color: #000000;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+header img {
+    width: 150px;
+    margin: 1rem auto;
+    filter: grayscale(0.45);
+}
+
+header p {
+    font-family: VT-100, monospace;
+    font-weight: 800;
+    letter-spacing: 7.75px;
+    text-align: center;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+nav a {
+    padding: 3.75px;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #ecb176;
+    color: #000000;
+}
+
+/* main */
+main {
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main .box {
+    width: 75vw;
+    text-align: justify;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+form label {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+}
+
+form input {
+    width: 250px;
+    margin: 0.45rem 0;
+    padding: 0.25rem;
+    border: 0;
+    background-color: #fed8b1;
+    border-radius: 5px;
+}
+
+form input:focus {
+    outline: 2.25px dashed #ecb176;
+}
+
+form input[type="submit"] {
+    width: 75px;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:active {
+    transform: scale(1.045);
+    background-color: #ecb176;
+}

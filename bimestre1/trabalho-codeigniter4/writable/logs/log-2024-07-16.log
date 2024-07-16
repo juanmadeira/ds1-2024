@@ -1,0 +1,472 @@
+CRITICAL - 2024-07-16 14:41:48 --> ErrorException: require_once(config.php): Failed to open stream: No such file or directory
+[Method: GET, Route: login]
+in APPPATH\Views\login.php on line 12.
+ 1 APPPATH\Views\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\login.php(12): require_once()
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\app\\Views\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Home.php(37): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:42:34 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: login]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:43:53 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: login]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:47:28 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: login]
+in APPPATH\Views\login.php on line 36.
+ 1 APPPATH\Views\login.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Home.php(37): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:50:08 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: login]
+in APPPATH\Views\login.php on line 36.
+ 1 APPPATH\Views\login.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Home.php(37): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:50:46 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: login]
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:56:41 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:58:09 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:59:34 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 14:59:44 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:01:06 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:06:14 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: signup]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 3 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:08:42 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 50.
+ 1 APPPATH\Controllers\Home.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:14:37 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 50.
+ 1 APPPATH\Controllers\Home.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:15:53 --> ErrorException: Undefined property: App\Controllers\Home::$load
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 41.
+ 1 APPPATH\Controllers\Home.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:17:31 --> ErrorException: Undefined variable $config
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 41.
+ 1 APPPATH\Controllers\Home.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-16 15:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 15:17:44 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-16 15:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 15:17:49 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-16 15:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 15:18:03 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:03 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 APPPATH\Controllers\Home.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:08 --> ErrorException: Undefined variable $SESSION
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 APPPATH\Controllers\Home.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:10 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 APPPATH\Controllers\Home.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:27 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:38 --> ErrorException: session_destroy(): Trying to destroy uninitialized session
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Home.php(9): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:42 --> ErrorException: session_destroy(): Trying to destroy uninitialized session
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\Home.php(9): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:20:45 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:22:29 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 APPPATH\Controllers\Home.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:22:36 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:22:44 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:24:08 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:25:07 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: /]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set()
+ 3 SYSTEMPATH\Config\Services.php(688): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH\Common.php(971): service()
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL()
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:28:43 --> ErrorException: Undefined property: App\Controllers\Home::$session
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 50.
+ 1 APPPATH\Controllers\Home.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+CRITICAL - 2024-07-16 15:32:05 --> Error: Call to a member function setFlashdata() on null
+[Method: POST, Route: signup]
+in APPPATH\Controllers\Home.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-16 15:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 15:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,2 @@
+Professor Brião
+Nós, alunos da 4C, gostaríamos de te agradecer por tudo que fizeste por nós até agora: jamais mediu esforços para nos ajudar a conseguir estágios, sempre fez questão de nos ensinar da melhor maneira possível as matérias do curso, foi (e continua sendo) um ótimo professor, amigo, companheiro e atencioso. O senhor é um exemplo de pessoa e uma inspiração como profissional para todos aqui que pretendem seguir na área. Sendo assim, seria uma honra tê-lo como nosso patrono em um encerramento de ciclo que marcará cada um de nós para sempre.

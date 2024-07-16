@@ -1,84 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title><?= lang('Errors.pageNotFound') ?></title>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <title>início | babriogeca</title>
+        <style>
+            .box {
+                display: flex;
+                flex-flow: column wrap;
+                text-align: center;
+            }
 
-    <style>
-        div.logo {
-            height: 200px;
-            width: 155px;
-            display: inline-block;
-            opacity: 0.08;
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            margin-left: -73px;
-        }
-        body {
-            height: 100%;
-            background: #fafafa;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #777;
-            font-weight: 300;
-        }
-        h1 {
-            font-weight: lighter;
-            letter-spacing: normal;
-            font-size: 3rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #222;
-        }
-        .wrap {
-            max-width: 1024px;
-            margin: 5rem auto;
-            padding: 2rem;
-            background: #fff;
-            text-align: center;
-            border: 1px solid #efefef;
-            border-radius: 0.5rem;
-            position: relative;
-        }
-        pre {
-            white-space: normal;
-            margin-top: 1.5rem;
-        }
-        code {
-            background: #fafafa;
-            border: 1px solid #efefef;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            display: block;
-        }
-        p {
-            margin-top: 1.5rem;
-        }
-        .footer {
-            margin-top: 2rem;
-            border-top: 1px solid #efefef;
-            padding: 1em 2em 0 2em;
-            font-size: 85%;
-            color: #999;
-        }
-        a:active,
-        a:link,
-        a:visited {
-            color: #dd4814;
-        }
-    </style>
-</head>
-<body>
-    <div class="wrap">
-        <h1>404</h1>
+            h1 {
+                text-align: center;
+                font-weight: bold;
+            }
 
-        <p>
-            <?php if (ENVIRONMENT !== 'production') : ?>
-                <?= nl2br(esc($message)) ?>
-            <?php else : ?>
-                <?= lang('Errors.sorryCannotFind') ?>
-            <?php endif; ?>
-        </p>
-    </div>
-</body>
+            p {
+                text-align: center;
+            }
+
+            img {
+                width: 35vw;
+                box-shadow: ;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="/"><img src="img/logo.png" /></a>
+            <a href="/"><p>babriogeca.</p></a>
+        </header>
+        <nav>
+            <a href="/">início</a>
+            <a href="login">entrar</a>
+            <a href="signup">registrar-se</a>
+        </nav>
+        <main>
+            <div class="box">
+                <h1>ERRO 404 !!!</h1>
+                <p>
+                    <?php if (ENVIRONMENT !== 'production') : ?>
+                        <?= nl2br(esc($message)) ?>
+                    <?php else : ?>
+                        <?= lang('Errors.sorryCannotFind') ?>
+                    <?php endif; ?>
+                </p>
+                <img src="img/gandalf-reading-2.webp" alt="erro" />
+            </div>
+        </main>
+    </body>
 </html>
