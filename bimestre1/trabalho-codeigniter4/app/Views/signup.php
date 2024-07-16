@@ -4,21 +4,21 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/style.css">
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="/img/logo.png">
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <title>registrar-se | babriogeca</title>
     </head>
     <body>
         <header>
-            <a href="/"><img src="img/logo.png" /></a>
+            <a href="/"><img src="/img/logo.png" /></a>
             <a href="/"><p>babriogeca.</p></a>
         </header>
         <nav>
             <a href="/">início</a>
-            <a href="login">entrar</a>
-            <a href="signup">registrar-se</a>
+            <a href="/signin">entrar</a>
+            <a href="/signup">registrar-se</a>
         </nav>
         <main>
             <div class="box">

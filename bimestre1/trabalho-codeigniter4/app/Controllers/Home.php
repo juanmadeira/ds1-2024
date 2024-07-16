@@ -29,8 +29,8 @@ class Home extends BaseController {
     //     return redirect()->to('/');
     // }
 
-    public function login() {
-        return view('login');
+    public function signin() {
+        return view('signin');
     }
 
     public function signup() {
@@ -47,9 +47,49 @@ class Home extends BaseController {
 
         $nerdsModel -> insert($data);
 
-        $this->session->setFlashdata('item', 'Usuário Registrado com Sucesso!');
-        print_r($_SESSION['item']);
+        $this->session->setFlashdata('sucess', 'Usuário registrado com sucesso!');
         return redirect()->to('/');
+    }
+
+    public function verifyEmail($email) {
+        $nerdsModel = new NerdsModel();
+        $username = $nerdsModel->getWhere(['email' => $email])->getRowArray();
+        if(empty($username)) return false;
+        return true;
+    }
+
+    public function verifyPassword($password, $email) {
+        $nerdsModel = new NerdsModel();
+        $token = $nerdsModel->getWhere(['email'=>$email])->getRowArray()['password'];
+        var_dump($password);
+        if(password_verify($password, $token)) return true;
+        return false;
+    }
+
+
+    public function login() {
+        $nerdsModel = new NerdsModel();
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+
+        if(!$this->verifyEmail($email)) {
+            $this->session->setFlashdata('error', 'O endereço de e-mail não confere!');
+            return redirect()->to('signin');
+        }
+        if(!$this->verifyPassword($password, $email)) {
+            $this->session->setFlashdata('error', 'A senha não confere!');
+            return redirect()->to('signin');
+        }
+        $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
+        $sessiondata = [
+        'id' => $user['id'],
+        'email' => $user['email'],
+        'username' => $user['username'],
+        // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
+        ];
+        $this->session->set($sessiondata);
+        if($user['adm'] == 1) return redirect()->to('admin');
+        return redirect()->to('usuario');
     }
 
     // public function edit() {
