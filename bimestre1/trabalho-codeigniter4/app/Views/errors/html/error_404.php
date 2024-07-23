@@ -10,10 +10,6 @@
         <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <title>início | babriogeca</title>
         <style>
-            body {
-                height: 110vh;
-            }
-
             .box {
                 display: flex;
                 flex-flow: column wrap;
@@ -31,20 +27,17 @@
 
             img {
                 width: 35vw;
+                box-shadow: ;
+                display: block;
                 margin: 0 auto;
             }
         </style>
     </head>
     <body>
         <header>
-            <a href="/"><img src="/img/logo.png" /></a>
-            <a href="/"><p>babriogeca.</p></a>
+            <a href="/" ><img src="/img/logo.png" /></a>
+            <a href="/" ><p>babriogeca.</p></a>
         </header>
-        <nav>
-            <a href="/">início</a>
-            <a href="/signin">entrar</a>
-            <a href="/signup">registrar-se</a>
-        </nav>
         <main>
             <div class="box">
                 <h1>ERRO 404 !!!</h1>

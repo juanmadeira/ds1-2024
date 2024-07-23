@@ -25,13 +25,13 @@
                 <h1>Registrar-se</h1>
                 <form method="POST">
                     <label for="username">Nome de usuário:</label>
-                    <input type="text" name="username" placeholder="usuário">
+                    <input type="text" name="username" placeholder="usuário" required>
 
                     <label for="email">Endereço de e-mail:</label>
-                    <input type="text" name="email" placeholder="e-mail">
+                    <input type="text" name="email" placeholder="e-mail" required>
 
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" placeholder="senha">
+                    <input type="password" name="password" placeholder="senha" required>
 
                     <input type="submit" value="entrar">
                 </form> 

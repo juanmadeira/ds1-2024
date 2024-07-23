@@ -10,6 +10,7 @@ class Home extends BaseController {
         
         // $result = $nerdsModel->findAll();
         // $data['result'] = $result;
+        session_destroy();
         return view('index');
     }
     
@@ -29,10 +30,6 @@ class Home extends BaseController {
     //     return redirect()->to('/');
     // }
 
-    public function signin() {
-        return view('signin');
-    }
-
     public function signup() {
         return view('signup');
     }
@@ -51,10 +48,14 @@ class Home extends BaseController {
         return redirect()->to('/');
     }
 
+    public function signin() {
+        return view('signin');
+    }
+
     public function verifyEmail($email) {
         $nerdsModel = new NerdsModel();
-        $username = $nerdsModel->getWhere(['email' => $email])->getRowArray();
-        if(empty($username)) return false;
+        $email = $nerdsModel->getWhere(['email' => $email])->getRowArray();
+        if(empty($email)) return false;
         return true;
     }
 
@@ -76,10 +77,12 @@ class Home extends BaseController {
             $this->session->setFlashdata('error', 'O endereço de e-mail não confere!');
             return redirect()->to('signin');
         }
+
         if(!$this->verifyPassword($password, $email)) {
             $this->session->setFlashdata('error', 'A senha não confere!');
             return redirect()->to('signin');
         }
+
         $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
         $sessiondata = [
         'id' => $user['id'],
@@ -87,9 +90,37 @@ class Home extends BaseController {
         'username' => $user['username'],
         // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
         ];
+
         $this->session->set($sessiondata);
-        if($user['adm'] == 1) return redirect()->to('admin');
-        return redirect()->to('usuario');
+        if($user['adm'] == 1) return redirect()->to('admin'); # se for admin
+        return redirect()->to('user');                        # se for usuário
+    }
+
+    public function admin() {
+        return view('admin');
+    }
+
+    public function collection() {
+        $booksModel = new LivrosModel();
+        $booksArray = $booksModel->findAll();
+        $data = ['booksArray' => $booksArray];
+        return view('collection', $data);
+    }
+
+    public function control() {
+        return view('control');
+    }
+
+    public function user() {
+        return view('user');
+    }
+
+    public function books() {
+        return view('books');
+    }
+
+    public function my_books() {
+        return view('my_books');
     }
 
     // public function edit() {

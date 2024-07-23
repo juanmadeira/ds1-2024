@@ -7,10 +7,18 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home::index');
-$routes->get('/index', 'Home::index');
 
 $routes->get('/signin', 'Home::signin');
-$routes->get('/signup', 'Home::signup');
-
-$routes->post('/signup', 'Home::register');
 $routes->post('/signin', 'Home::login');
+
+$routes->get('/signup', 'Home::signup');
+$routes->post('/signup', 'Home::register');
+
+$routes->get('/admin', 'Home::admin');
+$routes->get('/collection', 'Home::collection');
+$routes->get('/control', 'Home::control');
+
+
+$routes->get('/user', 'Home::user');
+$routes->get('/books', 'Home::books');
+$routes->get('/my_books', 'Home::my_books');

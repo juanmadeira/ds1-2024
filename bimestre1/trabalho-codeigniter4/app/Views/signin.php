@@ -30,10 +30,10 @@
                 <h1>Entrar</h1>
                 <form method="POST">
                     <label for="email">Endereço de e-mail:</label>
-                    <input type="text" name="email" placeholder="e-mail">
+                    <input type="text" name="email" placeholder="e-mail" required>
 
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" placeholder="senha">
+                    <input type="password" name="password" placeholder="senha" required>
 
                     <input type="submit" value="Entrar">
                 </form>

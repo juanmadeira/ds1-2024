@@ -38,7 +38,7 @@ header a {
     color: #000000;
     text-decoration: none;
     text-align: center;
-    transition: transform 0.1s;
+    transition: 0.1s;
 }
 
 header a:hover {
@@ -80,6 +80,10 @@ nav a:hover {
     color: #000000;
 }
 
+nav img {
+    width: 25px;
+}
+
 /* main */
 main {
     margin: 2rem auto;
@@ -111,6 +115,14 @@ main .box {
     background-color: rgba(255, 0, 0, 0.204);
 }
 
+/* index */
+#index-img {
+    width: 300px;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+/* signin e signup */
 form {
     display: flex;
     flex-flow: column wrap;
@@ -142,4 +154,56 @@ form input[type="submit"]:hover,
 form input[type="submit"]:active {
     transform: scale(1.045);
     background-color: #ecb176;
+} 
+
+/* user */
+.user {
+    width: 100px;
+    height: 100px;
+    gap: 10px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.user img {
+    width: 100px;
+    padding: 15px;
+}
+
+.user-info {
+    width: 20vw;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.user-info p {
+    margin-bottom: 0;
+}
+
+.user-info span {
+    text-decoration: underline;
+}
+
+.button {
+    transition: 0.1s;
+}
+
+.button a {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color:#947259bb;
+    color: black;
+}
+
+.button:has(a:hover){
+    margin: 0 1rem;
+    transform: scale(1.05);
+}
+
+.button a:hover {
+    text-decoration: underline;
+    background-color: #ecb176;
+    color: #000000;
 }
