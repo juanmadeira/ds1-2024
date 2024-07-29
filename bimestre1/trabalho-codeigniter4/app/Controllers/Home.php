@@ -1,34 +1,17 @@
 <?php
 
+/*<?php echo "<pre>". print_r((array)$nerdsArray, true) ."</pre>"; ?>*/
+
 namespace App\Controllers;
 use App\Models\NerdsModel;
 use App\Models\LivrosModel;
+use App\Models\EmprestimosModel;
 
 class Home extends BaseController {
     public function index() {
-        // $nerdsModel = new nerdsModel();
-        
-        // $result = $nerdsModel->findAll();
-        // $data['result'] = $result;
         session_destroy();
         return view('index');
     }
-    
-    // public function update() {
-    //     $nerdsModel = new nerdsModel();
-    //     $id = $this->request->getVar('id');
-    //     $typeaction = $this->request->getVar('typeaction');
-    //     $data = array(
-    //         'autor' => $this->request->getVar('autor'),
-    //         'titulo' => $this->request->getVar('titulo'),
-    //         'ano' => $this->request->getVar('ano'),
-    //         'editora' => $this->request->getVar('editora'),
-    //         'adquiridor' => $this->request->getVar('adquiridor'),
-    //         'disponiveis' => $this->request->getVar('disponiveis')
-    //     );
-    //     ($typeaction == 'insert')?$livrosModel->insert($data):$livrosModel->update($id, $data);
-    //     return redirect()->to('/');
-    // }
 
     public function signup() {
         return view('signup');
@@ -52,22 +35,6 @@ class Home extends BaseController {
         return view('signin');
     }
 
-        public function verifyEmail($email) {
-            $nerdsModel = new NerdsModel();
-            $email = $nerdsModel->getWhere(['email' => $email])->getRowArray();
-            if(empty($email)) return false;
-            return true;
-        }
-
-        public function verifyPassword($password, $email) {
-            $nerdsModel = new NerdsModel();
-            $token = $nerdsModel->getWhere(['email'=>$email])->getRowArray()['password'];
-            var_dump($password);
-            if(password_verify($password, $token)) return true;
-            return false;
-        }
-
-
         public function login() {
             $nerdsModel = new NerdsModel();
             $email = $this->request->getVar('email');
@@ -84,16 +51,31 @@ class Home extends BaseController {
             }
 
             $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
-            $sessiondata = [
+            $sessionData = [
                 'id' => $user['id'],
                 'email' => $user['email'],
                 'username' => $user['username'],
                 // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
             ];
 
-            $this->session->set($sessiondata);
+            $this->session->set($sessionData);
             if($user['adm'] == 1) return redirect()->to('admin'); # se for admin
             return redirect()->to('user');                        # se for usuário
+        }
+
+        public function verifyEmail($email) {
+            $nerdsModel = new NerdsModel();
+            $email = $nerdsModel->getWhere(['email' => $email])->getRowArray();
+            if(empty($email)) return false;
+            return true;
+        }
+
+        public function verifyPassword($password, $email) {
+            $nerdsModel = new NerdsModel();
+            $token = $nerdsModel->getWhere(['email'=>$email])->getRowArray()['password'];
+            var_dump($password);
+            if(password_verify($password, $token)) return true;
+            return false;
         }
 
     public function admin() {
@@ -103,7 +85,8 @@ class Home extends BaseController {
     public function collection() {
         $booksModel = new LivrosModel();
         $booksArray = $booksModel->findAll();
-        $data = ['booksArray' => $booksArray];
+        $data['booksArray'] = $booksArray;
+
         return view('collection', $data);
     }
 
@@ -142,26 +125,20 @@ class Home extends BaseController {
             return view('edit_book', $result);
         }
 
-            // public function update_book() {
-            //     $livrosModel = new LivrosModel();
-            //     $id = $this->request->getVar('id');
-            //     $data = array(
-            //         'author' => $this->request->getVar('author'),
-            //         'title' => $this->request->getVar('title'),
-            //         'year' => $this->request->getVar('year'),
-            //         'publisher' => $this->request->getVar('publisher'),
-            //         'available' => $this->request->getVar('available')
-            //     );
-
-            //     $livrosModel->update($id,$data);
-
-            //     return redirect()->to('/collection');
-            // }
-
-            public function getDataItem($id) {
+            public function update_book() {
                 $livrosModel = new LivrosModel();
-                $result = $livrosModel->find($id);
-                return $result;
+                $id = $this->request->getVar('id');
+                $data = array(
+                    'author' => $this->request->getVar('author'),
+                    'title' => $this->request->getVar('title'),
+                    'year' => $this->request->getVar('year'),
+                    'publisher' => $this->request->getVar('publisher'),
+                    'available' => $this->request->getVar('available')
+                );
+
+                $livrosModel->update($id,$data);
+
+                return redirect()->to('/collection');
             }
 
     public function control() {
@@ -173,28 +150,61 @@ class Home extends BaseController {
     }
 
     public function books() {
-        return view('books');
+        $booksModel = new LivrosModel();
+        $booksArray = $booksModel->findAll();
+        $data['booksArray'] = $booksArray;
+
+        return view('books', $data);
     }
+
+        public function search() {
+            $query = $this->request->getVar('pesquisa');
+            $booksModel = new LivrosModel();
+
+            if ($query == '') {
+                header("Refresh: 0");
+            }
+            else {
+                if (is_numeric($query)) {
+                    $_SESSION['livros'] = $booksModel -> where('available >', 0)->where('year', $query)->find();
+                }
+                else {
+                    $_SESSION['livros'] = $booksModel -> where('available >', 0)->like('title', $query)->find();
+                }
+            }
+
+            return redirect('books');
+        }
+
+        public function borrow() {
+            $aluguel = array();
+            $aluguel['id_book'] = $this->request->getVar('id');
+            $aluguel['id_nerd'] = $_SESSION['id'];
+    
+            $booksModel = new LivrosModel();
+            $emprestimosModel = new EmprestimosModel();
+    
+            $emprestimosModel->insert($aluguel);
+    
+            $livro = $booksModel->where('id', $aluguel['id_book'])->first();
+            $livro['available']--;
+            $booksModel->update($aluguel['id_book'], $livro);
+    
+            return redirect('my_books');
+        }
 
     public function my_books() {
+        $emprestimosModel = new EmprestimosModel();
+        $booksModel = new LivrosModel();
+
+        $_SESSION['emprestimos'] = array();
+        $searchEmprestimo = $emprestimosModel->where('id_nerd', $_SESSION['id'])->find();
+
+        foreach ($searchEmprestimo as $key => $value) {
+            $resultEmprestimo = $booksModel -> where('id', $searchEmprestimo[$key]['id_book']) -> first();
+            array_push($_SESSION['emprestimos'], $resultEmprestimo);
+        }
+
         return view('my_books');
     }
-
-    // public function edit() {
-    //     $id = $this->request->getVar('id');
-    //     return view('edit_book',$this->getDataItem($id));
-    // }
-
-    // public function delete() {
-    //     $livrosModel = new LivrosModel();
-    //     $id = $this->request->getVar('id');
-    //     $livrosModel->delete($id);
-    //     return redirect()->to('/');
-    // }
-
-    // public function getDataItem($id) {
-    //     $livrosModel = new LivrosModel();
-    //     $result = $livrosModel->find($id);
-    //     return $result;
-    // }
 }

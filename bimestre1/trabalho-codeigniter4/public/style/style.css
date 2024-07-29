@@ -217,18 +217,22 @@ form input[type="submit"]:active {
     color: #000000;
 }
 
-/* livros */
+/* livros (admin) */
 #add-book {
     text-align: center;
 }
 
-#collection-book-3 {
+#collection-book {
     display: block;
     margin:  0 auto 10px auto;
 }
 
 table {
     margin: 0 auto;
+}
+
+th:nth-child(2n) {
+    padding: 1rem;
 }
 
 td:nth-child(2n) {
@@ -238,4 +242,19 @@ td:nth-child(2n) {
 button {
     background-color: transparent;
     border-color: transparent;
+}
+
+/* livros (user) */
+form[action="search"] div {
+    margin: 0 auto;
+} 
+
+#books,
+#my-books {
+    display: block;
+    margin:  0 auto 10px auto;
+}
+
+.teste {
+    width: 100%
 }

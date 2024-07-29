@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1722284236;_ci_previous_url|s:27:"http://localhost:8080/books";id|s:1:"2";email|s:4:"user";username|s:4:"user";livros|a:1:{i:0;a:6:{s:2:"id";s:1:"1";s:6:"author";s:12:"Vitor Brauer";s:5:"title";s:5:"Festa";s:4:"year";s:4:"2022";s:9:"publisher";s:12:"Independente";s:9:"available";s:3:"998";}}

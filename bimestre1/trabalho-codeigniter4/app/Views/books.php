@@ -24,7 +24,47 @@
         <main>
             <div class="box">
                 <h1>Livros</h1>
-                <p></p>
+                <br>
+                <img src="/img/book-1.gif" id="books" />
+                <form action="search" method="post">
+                    <div>
+                        <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar livros">
+                        <button type="submit" id="pesquisabtn"><i class="bi bi-search"></i></button>
+                    </div> 
+                </form>
+                <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">Autores</th>
+                            <th class="text-center">Título</th>
+                            <th class="text-center">Ano</th>
+                            <th class="text-center">Editora</th>
+                            <th class="text-center">Qtd.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach($booksArray as $row){
+                            echo "<tr>";
+                            foreach($row as $key => $value){
+                                echo '<td>'.$value.'</td>';
+                                // if ($key == 'available' && $value != 42 ) {}
+                            }
+                            echo "<td>
+                                    <form action='/borrow' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'><i class='bi bi-bookmark-plus'></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            ";
+                        }
+                    ?>
+                    </tbody>
+                </table>
+                <hr>
             </div>
         </main>
     </body>

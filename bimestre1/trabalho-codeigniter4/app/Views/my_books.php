@@ -24,6 +24,32 @@
         <main>
             <div class="box">
                 <h1>Meus empréstimos</h1>
+                <br>
+                <img src="/img/book-1.gif" id="my-books" />
+                <hr>
+                <table>
+                    <?php
+                    if (count($_SESSION['emprestimos']) > 0) {
+                        echo('<thead><tr>
+                        <td class="text-center" style="font-weight: bold;">#</td>
+                        <td class="text-center" style="font-weight: bold;">Autores</td>
+                        <td class="text-center" style="font-weight: bold;">Título</td>
+                        <td class="text-center" style="font-weight: bold;">Ano</td>
+                        <td class="text-center" style="font-weight: bold;">Editora</td>
+                        </tr></thead>');
+                        foreach ($_SESSION['emprestimos'] as $key => $value) {
+                        echo "<tr>";
+                        foreach ($_SESSION['emprestimos'][$key] as $key => $value) {
+                            if ($key != 'available') echo "<td>".$value."</td>";
+                        }
+                        echo "</tr>";
+                        }
+                    }else {
+                        echo'<p style="text-align: center">Você ainda não pegou nenhum livro de <a href="/books">nossa biblioteca</a>, '.$_SESSION['username'].'</p>';
+                    }
+                    ?>
+                </table>
+                <hr>
             </div>
         </main>
     </body>

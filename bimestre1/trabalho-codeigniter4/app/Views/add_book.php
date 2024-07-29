@@ -17,7 +17,7 @@
         </header>
         <nav>
             <a href="/collection">gerenciamento de livros</a>
-            <a href="/control">controle de empréstimos</a>.
+            <a href="/control">controle de usuários</a>.
             <a href="/admin"><img src="/img/user-icon.png" /> <span><?php echo $_SESSION['username'] ?></span></a>
             <a href="/">sair</a>
         </nav>

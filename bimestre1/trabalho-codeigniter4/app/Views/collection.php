@@ -17,7 +17,7 @@
         </header>
         <nav>
             <a href="/collection">gerenciamento de livros</a>
-            <a href="/control">controle de empréstimos</a>.
+            <a href="/control">controle de usuários</a>.
             <a href="/admin"><img src="/img/user-icon.png" /> <span><?php echo $_SESSION['username'] ?></span></a>
             <a href="/">sair</a>
         </nav>
@@ -29,7 +29,7 @@
                     <a href="/add_book">Adicionar livro</a>
                 </div>
                 <br>
-                <img src="/img/book-3.gif" id="collection-book-3" />
+                <img src="/img/book-3.gif" id="collection-book" />
                 <hr>
                 <table>
                     <thead>
@@ -46,10 +46,8 @@
                         <?php
                         foreach($booksArray as $row){
                             echo "<tr>";
-                            foreach($row as $value){
-                                if (is_null($value) === false) {
-                                    echo '<td>'.$value.'</td>';
-                                }
+                            foreach($row as $key => $value){
+                                echo '<td>'.$value.'</td>';
                             }
                             echo "<td>
                                     <form action='/edit_book' method='post'>
@@ -66,7 +64,7 @@
                             </tr>
                             ";
                         }
-                    ?>
+                        ?>
                     </tbody>
                 </table>
                 <hr>

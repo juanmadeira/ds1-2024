@@ -34,10 +34,6 @@
                         <br>
                     </div>
                 </div>
-                <br>
-                <div class="button">
-                    <a href="/my_books">Acessar meus empréstimos</a>
-                </div>
             </div>
         </main>
     </body>
