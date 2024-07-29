@@ -3,7 +3,6 @@
 namespace App\Controllers;
 use App\Models\NerdsModel;
 use App\Models\LivrosModel;
-use CodeIgniter\Files\File;
 
 class Home extends BaseController {
     public function index() {
@@ -86,10 +85,10 @@ class Home extends BaseController {
 
             $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
             $sessiondata = [
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'username' => $user['username'],
-            // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
+                'id' => $user['id'],
+                'email' => $user['email'],
+                'username' => $user['username'],
+                // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
             ];
 
             $this->session->set($sessiondata);
@@ -115,6 +114,7 @@ class Home extends BaseController {
             public function new_book() {
                 $livrosModel = new LivrosModel();
                 $data = array (
+                    'id' => $this->request->getVar('id'),
                     'author' => $this->request->getVar('author'),
                     'title' => $this->request->getVar('title'),
                     'year' => $this->request->getVar('year'),
@@ -132,6 +132,36 @@ class Home extends BaseController {
                 $id = $this->request->getVar('id');
                 $livrosModel->delete($id);
                 return redirect()->to('/collection');
+            }
+
+        public function edit_book() {
+            $livrosModel = new livrosModel();
+            $id = $this->request->getVar('id');
+            $result = $livrosModel->find($id);
+
+            return view('edit_book', $result);
+        }
+
+            // public function update_book() {
+            //     $livrosModel = new LivrosModel();
+            //     $id = $this->request->getVar('id');
+            //     $data = array(
+            //         'author' => $this->request->getVar('author'),
+            //         'title' => $this->request->getVar('title'),
+            //         'year' => $this->request->getVar('year'),
+            //         'publisher' => $this->request->getVar('publisher'),
+            //         'available' => $this->request->getVar('available')
+            //     );
+
+            //     $livrosModel->update($id,$data);
+
+            //     return redirect()->to('/collection');
+            // }
+
+            public function getDataItem($id) {
+                $livrosModel = new LivrosModel();
+                $result = $livrosModel->find($id);
+                return $result;
             }
 
     public function control() {

@@ -35,8 +35,8 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-center">Título</th>
                             <th class="text-center">Autores</th>
+                            <th class="text-center">Título</th>
                             <th class="text-center">Ano</th>
                             <th class="text-center">Editora</th>
                             <th class="text-center">Qtd.</th>

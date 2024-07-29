@@ -19,6 +19,9 @@ $routes->get('/collection', 'Home::collection');
     $routes->get('/add_book', 'Home::add_book');
     $routes->post('/add_book', 'Home::new_book');
     $routes->post('/delete_book', 'Home::delete_book');
+
+    $routes->post('/edit_book', 'Home::edit_book');
+    $routes->post('/edit_book', 'Home::update_book');
 $routes->get('/control', 'Home::control');
 
 $routes->get('/user', 'Home::user');
