@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\NerdsModel;
 use App\Models\LivrosModel;
+use CodeIgniter\Files\File;
 
 class Home extends BaseController {
     public function index() {
@@ -34,67 +35,67 @@ class Home extends BaseController {
         return view('signup');
     }
 
-    public function register(){
-        $nerdsModel = new NerdsModel();
-        $data = array (
-            'username' => $this->request->getVar('username'),
-            'email' => $this->request->getVar('email'),
-            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT)
-        );
+        public function register(){
+            $nerdsModel = new NerdsModel();
+            $data = array (
+                'username' => $this->request->getVar('username'),
+                'email' => $this->request->getVar('email'),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT)
+            );
 
-        $nerdsModel -> insert($data);
+            $nerdsModel -> insert($data);
 
-        $this->session->setFlashdata('sucess', 'Usuário registrado com sucesso!');
-        return redirect()->to('/');
-    }
+            $this->session->setFlashdata('sucess', 'Usuário registrado com sucesso!');
+            return redirect()->to('/');
+        }
 
     public function signin() {
         return view('signin');
     }
 
-    public function verifyEmail($email) {
-        $nerdsModel = new NerdsModel();
-        $email = $nerdsModel->getWhere(['email' => $email])->getRowArray();
-        if(empty($email)) return false;
-        return true;
-    }
-
-    public function verifyPassword($password, $email) {
-        $nerdsModel = new NerdsModel();
-        $token = $nerdsModel->getWhere(['email'=>$email])->getRowArray()['password'];
-        var_dump($password);
-        if(password_verify($password, $token)) return true;
-        return false;
-    }
-
-
-    public function login() {
-        $nerdsModel = new NerdsModel();
-        $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password');
-
-        if(!$this->verifyEmail($email)) {
-            $this->session->setFlashdata('error', 'O endereço de e-mail não confere!');
-            return redirect()->to('signin');
+        public function verifyEmail($email) {
+            $nerdsModel = new NerdsModel();
+            $email = $nerdsModel->getWhere(['email' => $email])->getRowArray();
+            if(empty($email)) return false;
+            return true;
         }
 
-        if(!$this->verifyPassword($password, $email)) {
-            $this->session->setFlashdata('error', 'A senha não confere!');
-            return redirect()->to('signin');
+        public function verifyPassword($password, $email) {
+            $nerdsModel = new NerdsModel();
+            $token = $nerdsModel->getWhere(['email'=>$email])->getRowArray()['password'];
+            var_dump($password);
+            if(password_verify($password, $token)) return true;
+            return false;
         }
 
-        $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
-        $sessiondata = [
-        'id' => $user['id'],
-        'email' => $user['email'],
-        'username' => $user['username'],
-        // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
-        ];
 
-        $this->session->set($sessiondata);
-        if($user['adm'] == 1) return redirect()->to('admin'); # se for admin
-        return redirect()->to('user');                        # se for usuário
-    }
+        public function login() {
+            $nerdsModel = new NerdsModel();
+            $email = $this->request->getVar('email');
+            $password = $this->request->getVar('password');
+
+            if(!$this->verifyEmail($email)) {
+                $this->session->setFlashdata('error', 'O endereço de e-mail não confere!');
+                return redirect()->to('signin');
+            }
+
+            if(!$this->verifyPassword($password, $email)) {
+                $this->session->setFlashdata('error', 'A senha não confere!');
+                return redirect()->to('signin');
+            }
+
+            $user = $nerdsModel->getWhere(['email'=>$email])->getRowArray();
+            $sessiondata = [
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'username' => $user['username'],
+            // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
+            ];
+
+            $this->session->set($sessiondata);
+            if($user['adm'] == 1) return redirect()->to('admin'); # se for admin
+            return redirect()->to('user');                        # se for usuário
+        }
 
     public function admin() {
         return view('admin');
@@ -106,6 +107,32 @@ class Home extends BaseController {
         $data = ['booksArray' => $booksArray];
         return view('collection', $data);
     }
+
+        public function add_book() {
+            return view('add_book');
+        }
+
+            public function new_book() {
+                $livrosModel = new LivrosModel();
+                $data = array (
+                    'author' => $this->request->getVar('author'),
+                    'title' => $this->request->getVar('title'),
+                    'year' => $this->request->getVar('year'),
+                    'publisher' => $this->request->getVar('publisher'),
+                    'available' => $this->request->getVar('available')
+                );
+
+                $livrosModel -> insert($data);
+    
+                return redirect()->to('/collection');
+            }
+
+            public function delete_book() {
+                $livrosModel = new LivrosModel();
+                $id = $this->request->getVar('id');
+                $livrosModel->delete($id);
+                return redirect()->to('/collection');
+            }
 
     public function control() {
         return view('control');

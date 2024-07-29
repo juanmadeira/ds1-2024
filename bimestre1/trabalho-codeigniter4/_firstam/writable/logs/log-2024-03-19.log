@@ -1,0 +1,50 @@
+CRITICAL - 2024-03-19 14:42:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/', [], true)
+ 3 APPPATH\Controllers\FirstAm.php(14): view('/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\FirstAm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FirstAm))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-19 15:07:07 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'first_am', 3306, '', 0)
+#1 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\app\Controllers\FirstAm.php(12): CodeIgniter\BaseModel->findAll()
+#7 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(941): App\Controllers\FirstAm->index()
+#8 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FirstAm))
+#9 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\app\Controllers\FirstAm.php(12): CodeIgniter\BaseModel->findAll()
+#6 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(941): App\Controllers\FirstAm->index()
+#7 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FirstAm))
+#8 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\git\ds1-2024\bimestre1\exercicio2-codeigniter4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-03-19 15:07:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artistas`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\FirstAm.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\FirstAm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FirstAm))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

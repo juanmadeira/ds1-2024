@@ -24,25 +24,52 @@
         <main>
             <div class="box">
                 <h1>Gerenciamento de livros</h1>
+                <br>
+                <div class="button" id="add-book">
+                    <a href="/add_book">Adicionar livro</a>
+                </div>
+                <br>
+                <img src="/img/book-3.gif" id="collection-book-3" />
+                <hr>
                 <table>
                     <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Título</th>
-                        <th>Autores</th>
-                        <th>Ano</th>
-                        <th>Editora</th>
-                        <th>Quantidade</th>
-                    </tr>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">Título</th>
+                            <th class="text-center">Autores</th>
+                            <th class="text-center">Ano</th>
+                            <th class="text-center">Editora</th>
+                            <th class="text-center">Qtd.</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <?php
-                            foreach ($booksArray as $row) {
-                                var_dump($row);
+                        foreach($booksArray as $row){
+                            echo "<tr>";
+                            foreach($row as $value){
+                                if (is_null($value) === false) {
+                                    echo '<td>'.$value.'</td>';
+                                }
                             }
-                        ?>
+                            echo "<td>
+                                    <form action='/edit_book' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'><i class='bi bi-pencil-fill'></i></button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action='delete_book' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'><i class='bi bi-trash3-fill'></i></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            ";
+                        }
+                    ?>
                     </tbody>
                 </table>
+                <hr>
             </div>
         </main>
     </body>

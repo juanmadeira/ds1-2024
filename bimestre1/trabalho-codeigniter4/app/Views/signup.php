@@ -33,7 +33,7 @@
                     <label for="password">Senha:</label>
                     <input type="password" name="password" placeholder="senha" required>
 
-                    <input type="submit" value="entrar">
+                    <input type="submit" value="Registrar">
                 </form> 
             </div>
         </main>

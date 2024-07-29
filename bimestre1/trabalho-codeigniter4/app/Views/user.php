@@ -23,7 +23,7 @@
         </nav>
         <main>
             <div class="box">
-                <h1>Bem vindo (a), <?php echo $_SESSION['username'] ?>!</h1>
+                <h1>Bem-vindo (a), <?php echo $_SESSION['username'] ?>!</h1>
                 <div class="user">
                     <div class="user-picture">
                         <img src="/img/user-icon.png" />
@@ -32,10 +32,11 @@
                         <p><span>Nome de usuário</span>: <?php echo $_SESSION['username'] ?></p>
                         <p><span>E-mail</span>: <?php echo $_SESSION['email'] ?></p>
                         <br>
-                        <div class="button">
-                            <a href="/my_books">Acessar meus empréstimos</a>
-                        </div>
                     </div>
+                </div>
+                <br>
+                <div class="button">
+                    <a href="/my_books">Acessar meus empréstimos</a>
                 </div>
             </div>
         </main>

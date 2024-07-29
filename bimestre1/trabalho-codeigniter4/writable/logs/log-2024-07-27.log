@@ -1,0 +1,156 @@
+INFO - 2024-07-27 22:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-27 19:12:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+#5 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(57): CodeIgniter\Model->__call()
+#6 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+#7 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(933): App\Controllers\Home->login()
+#8 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+#4 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(57): CodeIgniter\Model->__call()
+#5 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+#6 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(933): App\Controllers\Home->login()
+#7 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-07-27 19:12:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signin]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+ 4 APPPATH\Controllers\Home.php(57): CodeIgniter\Model->__call()
+ 5 APPPATH\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-27 19:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-27 19:12:43 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+#5 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(57): CodeIgniter\Model->__call()
+#6 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+#7 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(933): App\Controllers\Home->login()
+#8 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+#4 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(57): CodeIgniter\Model->__call()
+#5 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\app\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+#6 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(933): App\Controllers\Home->login()
+#7 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 D:\Documents\git\ds1-2024\bimestre1\trabalho-codeigniter4\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-07-27 19:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signin]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1774): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->getWhere()
+ 4 APPPATH\Controllers\Home.php(57): CodeIgniter\Model->__call()
+ 5 APPPATH\Controllers\Home.php(76): App\Controllers\Home->verifyEmail()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-27 19:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 19:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 21:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 21:28:00 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin]
+in APPPATH\Views\admin.php on line 21.
+ 1 APPPATH\Views\admin.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\app\\Views\\admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Home.php(100): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-27 21:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 21:28:07 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin]
+in APPPATH\Views\admin.php on line 21.
+ 1 APPPATH\Views\admin.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\app\\Views\\admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Home.php(100): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Documents\\git\\ds1-2024\\bimestre1\\trabalho-codeigniter4\\public\\index.php')
+INFO - 2024-07-27 21:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 21:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 21:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 21:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 22:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
