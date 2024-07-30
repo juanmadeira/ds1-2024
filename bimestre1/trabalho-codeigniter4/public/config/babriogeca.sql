@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 23-Jul-2024 às 17:37
--- Versão do servidor: 8.0.37-0ubuntu0.22.04.3
--- versão do PHP: 7.3.33-8+ubuntu22.04.1+deb.sury.org+1
+-- Generation Time: Jul 30, 2024 at 03:56 AM
+-- Server version: 9.0.1
+-- PHP Version: 8.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,50 +18,50 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `babriogeca`
+-- Database: `babriogeca`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `emprestimos`
+-- Table structure for table `emprestimos`
 --
 
 CREATE TABLE `emprestimos` (
   `id` int NOT NULL,
-  `id_livro` int NOT NULL,
+  `id_book` int NOT NULL,
   `id_nerd` int NOT NULL,
-  `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `livros`
+-- Table structure for table `livros`
 --
 
 CREATE TABLE `livros` (
   `id` bigint UNSIGNED NOT NULL,
-  `autores` varchar(255) NOT NULL,
-  `titulo` varchar(255) NOT NULL,
-  `ano` varchar(4) NOT NULL,
-  `editora` varchar(255) NOT NULL,
-  `locatario` varchar(255) DEFAULT NULL,
-  `disponiveis` int NOT NULL
+  `author` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `year` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `publisher` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `available` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `livros`
+-- Dumping data for table `livros`
 --
 
-INSERT INTO `livros` (`id`, `autores`, `titulo`, `ano`, `editora`, `locatario`, `disponiveis`) VALUES
-(1, 'J. R. R. Tolkien', 'O Hobbit (Ou Lá e De Volta Outra Vez)', '2019', 'Harper Collins Brasil', NULL, 42),
-(2, 'Vitor Brauer', 'Festa', '2022', 'Independente', NULL, 999);
+INSERT INTO `livros` (`id`, `author`, `title`, `year`, `publisher`, `available`) VALUES
+(1, 'J. R. R. Tolkien', 'O Hobbit', '2019', 'Harper Collins Brasil', 42),
+(2, 'Vitor Brauer', 'Festa', '2022', 'Independente', 997),
+(3, 'Miguel Martins', 'How to become a CHAD', '2025', 'Independente', 414);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nerds`
+-- Table structure for table `nerds`
 --
 
 CREATE TABLE `nerds` (
@@ -69,37 +69,36 @@ CREATE TABLE `nerds` (
   `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `adm` tinyint(1) DEFAULT NULL
+  `adm` varchar(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `nerds`
+-- Dumping data for table `nerds`
 --
 
 INSERT INTO `nerds` (`id`, `username`, `email`, `password`, `adm`) VALUES
-(1, 'admin', 'admin', '$2y$10$V1KpNLKlGQvQaRBuU6iWIOktNNJizGUAosbcfQGcp2H5AKqMaULjO', 1),
-(2, 'user', 'user', '$2y$10$oUe2OXxqJO2vCFjr7dNyiu.egnGpDfuVN4Xz0t9i3V9Zca37iL8Ja', NULL),
-(5, 'juan', 'juan', '$2y$10$62y2kHcW5oSwVIiN/EoT..Vflf94lYiodJ8olXMpLQxRvxuB/WkEG', NULL);
+(1, 'admin', 'admin', '$2y$10$V1KpNLKlGQvQaRBuU6iWIOktNNJizGUAosbcfQGcp2H5AKqMaULjO', 'Sim'),
+(2, 'user', 'user', '$2y$10$oUe2OXxqJO2vCFjr7dNyiu.egnGpDfuVN4Xz0t9i3V9Zca37iL8Ja', NULL);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `emprestimos`
+-- Indexes for table `emprestimos`
 --
 ALTER TABLE `emprestimos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `livros`
+-- Indexes for table `livros`
 --
 ALTER TABLE `livros`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Índices para tabela `nerds`
+-- Indexes for table `nerds`
 --
 ALTER TABLE `nerds`
   ADD PRIMARY KEY (`id`),
@@ -107,26 +106,26 @@ ALTER TABLE `nerds`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `emprestimos`
+-- AUTO_INCREMENT for table `emprestimos`
 --
 ALTER TABLE `emprestimos`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de tabela `livros`
+-- AUTO_INCREMENT for table `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT de tabela `nerds`
+-- AUTO_INCREMENT for table `nerds`
 --
 ALTER TABLE `nerds`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
