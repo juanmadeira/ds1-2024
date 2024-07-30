@@ -29,9 +29,8 @@
                 ?>
                 <h1>Início</h1>
                 <p>Seja muito bem-vindo(a) à <b>babriogeca</b>!</p>
-                <img id="index-img" src="/img/gandalf-reading-1.webp" alt="gandalf" />
                 <p>Entre na sua conta clicando <a href="/signin">aqui</a>, ou, caso ainda não possua uma, registre-se <a href="signup">aqui</a>!</p>
-                <img src="/img/compman.gif" />
+                <img id="index-img" src="/img/gandalf-reading-1.webp" alt="gandalf" />
             </div>
         </main>
     </body>
