@@ -55,6 +55,7 @@ class Home extends BaseController {
                 'id' => $user['id'],
                 'email' => $user['email'],
                 'username' => $user['username'],
+                'adm' => $user['adm'],
                 // 'booksRelated' => $myModel->query('SELECT livros.* from livros join relations on relations.id_liv = livros.id join usuarios on usuarios.id = relations.id_user')->getResultArray()
             ];
 
@@ -83,10 +84,7 @@ class Home extends BaseController {
     }
 
     public function collection() {
-        $booksModel = new LivrosModel();
-        $booksArray = $booksModel ->orderby('year', 'DESC') -> findAll();
-        $data['booksArray'] = $booksArray;
-        
+        $data['booksArray'] = $this -> searchBooks();
         return view('collection', $data);
     }
 
@@ -174,18 +172,31 @@ class Home extends BaseController {
                 $query = $_GET['search'];
             }
 
-            if (is_numeric($query)) {
-                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('year', $query) -> find();
-            } else {
-                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query) -> find();
-                $booksArray += $booksModel -> where('available >', 0) -> like('author', $query) -> find();
-                $booksArray += $booksModel -> where('available >', 0) -> like('publisher', $query) -> find();
+            if ($_SESSION['adm'] == "Sim") {
+                if (is_numeric($query)) {
+                    $booksArray = $booksModel -> orderby('year', 'DESC') -> like('year', $query) -> find();
+                }
+                else {
+                    $booksArray = $booksModel -> orderby('year', 'DESC') -> like('title', $query) -> find();
+                    $booksArray += $booksModel -> like('author', $query) -> find();
+                    $booksArray += $booksModel -> like('publisher', $query) -> find();
 
-                // $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query);
-                // $booksArray -> orlike('author', $query);
-                // $booksArray -> orlike('publisher', $query);
-                
-                // $booksArray = $booksArray -> where('available >', 0) -> find();
+                    // $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query);
+                    // $booksArray -> orlike('author', $query);
+                    // $booksArray -> orlike('publisher', $query);
+                    
+                    // $booksArray = $booksArray -> where('available >', 0) -> find();
+                }
+            }
+            else {
+                if (is_numeric($query)) {
+                    $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('year', $query) -> find();
+                }
+                else {
+                    $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query) -> find();
+                    $booksArray += $booksModel -> where('available >', 0) -> like('author', $query) -> find();
+                    $booksArray += $booksModel -> where('available >', 0) -> like('publisher', $query) -> find();
+                }
             }
 
             return $booksArray;
