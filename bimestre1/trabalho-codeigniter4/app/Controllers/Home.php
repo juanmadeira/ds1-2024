@@ -177,7 +177,7 @@ class Home extends BaseController {
             if (is_numeric($query)) {
                 $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('year', $query) -> find();
             } else {
-                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query) -> like('author', $query) -> like('publisher', $query) -> find();
+                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query) -> or_like('author', $query) -> or_like('publisher', $query) -> find();
                 // $booksArray += $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('author', $query) -> find();
                 // $booksArray += $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('publisher', $query) -> find();
             }
