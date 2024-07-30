@@ -26,22 +26,26 @@
                 <h1>Livros</h1>
                 <br>
                 <img src="/img/book-1.gif" id="books" />
-                <form action="search" method="post">
-                    <div>
-                        <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar livros">
-                        <button type="submit" id="pesquisabtn"><i class="bi bi-search"></i></button>
-                    </div> 
-                </form>
+                <div class="search">
+                    <input type="text" name="search" id="searchInput" placeholder="Pesquisar livros">
+                    <button type="submit" id="searchButton" onclick="search()"><i class="bi bi-search"></i></button>
+                    <script>
+                        let input = document.querySelector("#searchInput");
+                        let button = document.querySelector("searchButton");
+                        function search() {
+                            window.location = "books?search=" + input.value + "#booksTable";
+                        }
+                        button.addEventListener('keydown', function(e) {if(event.key === 'Enter') search()}) 
+                    </script>
+                </div>
                 <hr>
-                <table>
+                <table id="booksTable">
                     <thead>
                         <tr>
-                            <th class="text-center">#</th>
                             <th class="text-center">Autores</th>
                             <th class="text-center">Título</th>
                             <th class="text-center">Ano</th>
                             <th class="text-center">Editora</th>
-                            <th class="text-center">Qtd.</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,13 +53,12 @@
                         foreach($booksArray as $row){
                             echo "<tr>";
                             foreach($row as $key => $value){
-                                echo '<td>'.$value.'</td>';
-                                // if ($key == 'available' && $value != 42 ) {}
+                                if ($key != 'id' && $key != 'available') echo '<td>'.$value.'</td>';
                             }
                             echo "<td>
                                     <form action='/borrow' method='post'>
                                         <input type='hidden' value=".$row['id']." name='id'>
-                                        <button type='submit'><i class='bi bi-bookmark-plus'></i></button>
+                                        <button type='submit'><i class='bi bi-bookmark-plus'></i> Pegar emprestado</button>
                                     </form>
                                 </td>
                             </tr>

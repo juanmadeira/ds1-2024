@@ -25,13 +25,12 @@
             <div class="box">
                 <h1>Meus empréstimos</h1>
                 <br>
-                <img src="/img/book-1.gif" id="my-books" />
+                <img src="/img/globe.gif" id="my-books" />
                 <hr>
                 <table>
                     <?php
                     if (count($_SESSION['emprestimos']) > 0) {
                         echo('<thead><tr>
-                        <td class="text-center" style="font-weight: bold;">#</td>
                         <td class="text-center" style="font-weight: bold;">Autores</td>
                         <td class="text-center" style="font-weight: bold;">Título</td>
                         <td class="text-center" style="font-weight: bold;">Ano</td>
@@ -40,7 +39,7 @@
                         foreach ($_SESSION['emprestimos'] as $key => $value) {
                         echo "<tr>";
                         foreach ($_SESSION['emprestimos'][$key] as $key => $value) {
-                            if ($key != 'available') echo "<td>".$value."</td>";
+                            if ($key != 'id' && $key != 'available') echo "<td>".$value."</td>";
                         }
                         echo "</tr>";
                         }

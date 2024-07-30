@@ -25,10 +25,11 @@ $routes->get('/collection', 'Home::collection');
     $routes->post('/edit_book', 'Home::edit_book');
     $routes->post('/update_book', 'Home::update_book');
 $routes->get('/control', 'Home::control');
+    $routes->post('/delete_user', 'Home::delete_user');
 
 /* user routes */
 $routes->get('/user', 'Home::user');
-    $routes->post('/search', 'Home::search');
+// $routes->get('/search', 'Home::search');
     $routes->post('/borrow', 'Home::borrow');
 $routes->get('/books', 'Home::books');
 $routes->get('/my_books', 'Home::my_books');

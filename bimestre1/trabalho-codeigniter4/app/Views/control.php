@@ -24,7 +24,37 @@
         <main>
             <div class="box">
                 <h1>Controle de usuários</h1>
-                <p></p>
+                <br>
+                <img src="/img/compman.gif" id="control" />
+                <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">Nome de usuário</th>
+                            <th class="text-center">E-mail</th>
+                            <th class="text-center">Administrador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach($nerdsArray as $row){
+                            echo "<tr>";
+                            foreach($row as $key => $value){
+                                if ($key != 'password' && $key != 'available') echo '<td>'.$value.'</td>';
+                            }
+                            echo "<td>
+                                    <form action='delete_user' method='post'>
+                                        <input type='hidden' value=".$row['id']." name='id'>
+                                        <button type='submit'><i class='bi bi-trash3-fill'></i></i></button>
+                                    </form>
+                                </td>
+                            </tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <hr>
             </div>
         </main>
     </body>

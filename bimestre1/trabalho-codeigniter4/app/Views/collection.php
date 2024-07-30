@@ -30,8 +30,20 @@
                 </div>
                 <br>
                 <img src="/img/book-3.gif" id="collection-book" />
+                <div class="search">
+                    <input type="text" name="search" id="searchInput" placeholder="Pesquisar livros">
+                    <button type="submit" id="searchButton" onclick="search()"><i class="bi bi-search"></i></button>
+                    <script>
+                        let input = document.querySelector("#searchInput");
+                        let button = document.querySelector("searchButton");
+                        function search() {
+                            window.location = "collection?search=" + input.value + "#booksTable";
+                        }
+                        button.addEventListener('keydown', function(e) {if(event.key === 'Enter') search()}) 
+                    </script>
+                </div>
                 <hr>
-                <table>
+                <table id="booksTable">
                     <thead>
                         <tr>
                             <th class="text-center">#</th>

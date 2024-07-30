@@ -59,7 +59,7 @@ class Home extends BaseController {
             ];
 
             $this->session->set($sessionData);
-            if($user['adm'] == 1) return redirect()->to('admin'); # se for admin
+            if($user['adm'] == "Sim") return redirect()->to('admin'); # se for admin
             return redirect()->to('user');                        # se for usuário
         }
 
@@ -84,9 +84,9 @@ class Home extends BaseController {
 
     public function collection() {
         $booksModel = new LivrosModel();
-        $booksArray = $booksModel->findAll();
+        $booksArray = $booksModel->where('available >', 0)->orderby('year', 'DESC')->findAll();
         $data['booksArray'] = $booksArray;
-
+        
         return view('collection', $data);
     }
 
@@ -142,38 +142,47 @@ class Home extends BaseController {
             }
 
     public function control() {
-        return view('control');
+        $nerdsModel = new NerdsModel();
+        $nerdsArray = $nerdsModel->findAll();
+        $data['nerdsArray'] = $nerdsArray;
+
+        return view('control', $data);
     }
+
+        public function delete_user() {
+            $nerdsModel = new NerdsModel();
+            $id = $this->request->getVar('id');
+            $nerdsModel->delete($id);
+            return redirect()->to('/control');
+        }
 
     public function user() {
         return view('user');
     }
 
     public function books() {
-        $booksModel = new LivrosModel();
-        $booksArray = $booksModel->findAll();
-        $data['booksArray'] = $booksArray;
-
+        $data['booksArray'] = $this -> searchBooks();
         return view('books', $data);
     }
 
-        public function search() {
-            $query = $this->request->getVar('pesquisa');
+        public function searchBooks() {
+            $query = $this->request->getVar('search');
             $booksModel = new LivrosModel();
 
-            if ($query == '') {
-                header("Refresh: 0");
-            }
-            else {
-                if (is_numeric($query)) {
-                    $_SESSION['livros'] = $booksModel -> where('available >', 0)->where('year', $query)->find();
-                }
-                else {
-                    $_SESSION['livros'] = $booksModel -> where('available >', 0)->like('title', $query)->find();
-                }
+            $query = '';
+            if (isset($_GET['search'])) {
+                $query = $_GET['search'];
             }
 
-            return redirect('books');
+            if (is_numeric($query)) {
+                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('year', $query) -> find();
+            } else {
+                $booksArray = $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('title', $query) -> like('author', $query) -> like('publisher', $query) -> find();
+                // $booksArray += $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('author', $query) -> find();
+                // $booksArray += $booksModel -> where('available >', 0) -> orderby('year', 'DESC') -> like('publisher', $query) -> find();
+            }
+
+            return $booksArray;
         }
 
         public function borrow() {
@@ -184,10 +193,12 @@ class Home extends BaseController {
             $booksModel = new LivrosModel();
             $emprestimosModel = new EmprestimosModel();
     
+            // if ( $aluguel['id_book'] )
+
             $emprestimosModel->insert($aluguel);
-    
             $livro = $booksModel->where('id', $aluguel['id_book'])->first();
             $livro['available']--;
+
             $booksModel->update($aluguel['id_book'], $livro);
     
             return redirect('my_books');

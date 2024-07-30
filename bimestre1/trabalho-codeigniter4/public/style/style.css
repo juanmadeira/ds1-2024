@@ -137,12 +137,12 @@ form {
     flex-flow: column wrap;
 }
 
-form label {
+label {
     font-size: 1.15rem;
     letter-spacing: 1px;
 }
 
-form input {
+input {
     width: 250px;
     margin: 0.45rem 0;
     padding: 0.25rem;
@@ -155,12 +155,12 @@ form input:focus {
     outline: 2.25px dashed #ecb176;
 }
 
-form input[type="submit"] {
+input[type="submit"] {
     width: 75px;
 }
 
-form input[type="submit"]:hover,
-form input[type="submit"]:active {
+input[type="submit"]:hover,
+input[type="submit"]:active {
     transform: scale(1.045);
     background-color: #ecb176;
 } 
@@ -245,12 +245,14 @@ button {
 }
 
 /* livros (user) */
-form[action="search"] div {
+.search {
+    text-align: center;
     margin: 0 auto;
 } 
 
 #books,
-#my-books {
+#my-books,
+#control {
     display: block;
     margin:  0 auto 10px auto;
 }
