@@ -39,7 +39,7 @@
                         function search() {
                             window.location = "collection?search=" + input.value + "#booksTable";
                         }
-                        button.addEventListener('keydown', function(e) {if(event.key === 'Enter') search()}) 
+                        input.addEventListener('keypress', function(e) {if(e.key === 'Enter') search()}) 
                     </script>
                 </div>
                 <hr>
