@@ -2,7 +2,6 @@ const { sequelize, Sequelize } = require('../config/database');
 const bookModel = require("../models/books")(sequelize,Sequelize)
 
 exports.showAll = (req,res)=> {
-
     bookModel.findAll(
         {
           order:[['title','ASC']]
@@ -17,17 +16,8 @@ exports.showAll = (req,res)=> {
 
 }
 
-exports.show = (req,res) =>{
 
-    res.render("show",{layout:false,
-         title:req.body.title,
-         description:req.body.description
-    })
-
-}
-
-exports.insertData = (req,res) =>
-{
+exports.insertData = (req,res) => {
     const bookData = {
         title:req.body.title,
         description:req.body.description
@@ -42,23 +32,69 @@ exports.insertData = (req,res) =>
 
 }
 
-exports.showForm = (req,res) =>{
+exports.showForm = (req,res) => {
     res.render("form",{layout:false})
 }
 
 exports.delete = (req,res) => {
     const id_param = req.params.id;
     bookModel.destroy({
-        where: { id:id_param }
-    }).then((result) => {
+        where: {id:id_param}
+
+
+    }).then((result)=>{
         if(!result){
-            req.status(400).json (
-                { message: "Ocorreu um erro!" }
+            req.status(400).json(
+                {message:"An error occurred..."}
             );
         }
         res.redirect("/showall");
-    }).catch((err) => {
-        res.status(500).json({message: "Não deu pra deletar o objeto..."})
+    }).catch((err)=> {
+        res.status(500).json({message:"Could not delete such object."});
         console.log(err);
-    });
+    }
+)
+   
+}
+
+exports.editForm = (req,res) =>{
+
+    const id_param = req.params.id;
+    bookModel.findByPk(id_param).then(result => {
+        res.render("editform",
+            {
+             layout:false, 
+             id:id_param,
+             results_data:result 
+            }
+        ) // render
+    }
+
+).catch(err => {
+    res.status(500).json({message:"Error... Je suis désolé..."});
+    console.log(err);
+})
+   
+}
+
+exports.update = (req,res) => {
+
+    bookModel.update(
+    {
+        title:req.body.title,
+        description: req.body.description
+    },{
+        where: {id: req.body.id_for_updating}
+    }
+   ).then(anything=>{
+       if(!anything){
+        req.status(400).send({message:"An error ocurred."})
+       }
+       res.redirect('/showall');
+   }).catch(err=>{
+    res.status(500).send({
+        message: "Error when trying to access the database"
+    })
+   })
+
 }

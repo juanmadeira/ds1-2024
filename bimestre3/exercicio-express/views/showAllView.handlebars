@@ -3,12 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style/style.css" type="text/css" media="all">
         <title>Results</title>
     </head>
     <body>
         Books stored in books table
-
         <br>
 
         <table class="table">
@@ -24,8 +23,8 @@
                     <td>{{ id }}</td>
                     <td>{{ title }}</td>
                     <td>{{ description }}</td>
-                    <td href="/edit/{{ id }}"><a>Edit</a></td>
-                    <td href="/delete/{{ id }}"><a>Delete</a></td>
+                    <td><a href="/edit/{{ id }}">Editar</a></td>
+                    <td><a href="/delete/{{ id }}">Deletar</a></td>
                 </tr>
                 {{/each}}
             </tbody>
