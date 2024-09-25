@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* main */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    position: relative;
+    height: 100px;
+    background: linear-gradient(#438d56 -50%, #56b66e 50%, #438d56 150%);
+    margin-bottom: 20px;
+}
+
+.logocontainer {
+    padding-right: 100px;
+    padding-block: 10px;
+}
+
+.logo::after {
+    content: 'sistema de gestões operacionais';
+    font-size: 10px;
+    font-weight: 400;
+    position: absolute;
+    top: 63px;
+    left: 40px;
+}
+
+ul li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: none;
+    font-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-style: none;
+}
+
+.pagetitle{
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.submit{
+    background-color: green;
+    transition: all 100ms ease-in;
+}
+
+/* listAll */
+.search {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+th div {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+th div span {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    align-content: space-around;;
+}
+
+th div span button {
+    font-size: 0.5rem;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.15;
+}
+
+th div span button.active {
+    opacity: 1;
+}
+
+table {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+table a {
+    background-color: lightgreen;
+    color: rgba(0, 0, 0);
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+table a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+th {
+    background-color: rgba(128, 128, 128, 0.25);
+    border-radius: 0.75rem;
+    text-align: center;
+    padding: 7.75px 10px;
+}
+
+td { 
+    padding: 10px;
+    text-align: center;
+}
+
+.td-name {
+    text-align: left;
+}
+
+.td-a-delete:hover {
+    color: rgba(255, 0, 0, 0.75);
+}
+
+/* insertEmployees */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+label {
+    margin-top: 5px;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-radius: 0.5rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    width: fit-content;
+    padding: 5px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 152, 0);
+}
