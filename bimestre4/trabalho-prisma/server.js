@@ -68,7 +68,7 @@ app.delete("/proprietarios/:id", async (req, res) => {
 app.get("/proprietarios/search/:nome", async (req, res) => {
     const { nome } = req.params;
     const proprietarios = await prisma.proprietario.findMany({
-        where: { nome: { contains: nome, mode: "insensitive" } },
+        where: { nome: { contains: nome } }
     });
     res.json(proprietarios);
 });  
@@ -78,7 +78,7 @@ app.post("/produtos", async (req, res) => {
     const { desc, qtd, valor, proprietarioId } = req.body;
     try {
     const novoProduto = await prisma.produto.create({
-        data: { desc, qtd, valor, proprietarioId },
+            data: { desc, qtd, valor, proprietarioId },
         });
         res.status(201).json(novoProduto);
     } catch (error) {
@@ -125,7 +125,7 @@ app.delete("/produtos/:id", async (req, res) => {
 });
 
 // pesquisar produto de maior quantidade
-app.get("/produtos/maior-quantidade", async (req, res) => {
+app.get("/produtos/ordenar/maior-quantidade", async (req, res) => {
     const produto = await prisma.produto.findFirst({
         orderBy: { qtd: "desc" },
     });
@@ -133,15 +133,15 @@ app.get("/produtos/maior-quantidade", async (req, res) => {
 });
 
 // pesquisar produto de maior valor
-app.get("/produtos/maior-valor", async (req, res) => {
+app.get("/produtos/ordenar/maior-valor", async (req, res) => {
     const produto = await prisma.produto.findFirst({
-    orderBy: { valor: "desc" },
+        orderBy: { valor: "desc" },
     });
     res.json(produto);
 });
 
 // pesquisar produto de maior valor total (qtd * valor)
-app.get("/produtos/maior-valor-total", async (req, res) => {
+app.get("/produtos/ordenar/maior-valor-total", async (req, res) => {
     const produtos = await prisma.produto.findMany();
     const maiorValorTotal = produtos.reduce((max, produto) => {
     const valorTotal = produto.qtd * produto.valor;
@@ -153,7 +153,7 @@ app.get("/produtos/maior-valor-total", async (req, res) => {
 });
 
 // pesquisar o proprietário com o maior número de produtos
-app.get("/proprietarios/maior-numero-produtos", async (req, res) => {
+app.get("/proprietarios/ordenar/maior-numero-produtos", async (req, res) => {
     const proprietarios = await prisma.proprietario.findMany({
         include: { produtos: true },
     });
