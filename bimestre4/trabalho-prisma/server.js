@@ -6,9 +6,9 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 const app = express();
+app.use(bodyParser.json());
 app.use(ProprietariosRoutes);
 app.use(ProdutosRoutes);
-app.use(bodyParser.json());
 
 const PORT = 3000;
 
