@@ -22,6 +22,8 @@ export default function Produtos() {
     const [maiorValor, setMaiorValor] = useState(null);
     const [maiorValorTotal, setMaiorValorTotal] = useState(null);
 
+    const [search, setSearch] = useState(""); // Estado para o campo de busca
+
     useEffect(() => {
         fetchProdutos();
     }, []);
@@ -68,6 +70,10 @@ export default function Produtos() {
         setMaiorValorTotal(produtoMaiorValorTotal);
     };
 
+    const filteredProdutos = produtos.filter((prod) =>
+        prod.desc.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
         <div>
             <Typography variant="h5">🍃 adicionar produto</Typography>
@@ -82,8 +88,16 @@ export default function Produtos() {
             <Divider></Divider>
 
             <Typography variant="h5" style={{ marginTop: "2rem" }}>🌿 lista de produtos</Typography>
+            <TextField
+                label="pesquisar..."
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+            />
             <List>
-                {produtos.map((prod) => (
+                {filteredProdutos.map((prod) => (
                     <ListItem key={prod.id}>
                         <ListItemText
                             primary={`#${prod.id} | ${prod.desc}`}

@@ -19,6 +19,8 @@ export default function Proprietarios() {
 
     const [proprietarioMaisProdutos, setProprietarioMaisProdutos] = useState(null);
 
+    const [search, setSearch] = useState(""); // Estado para o campo de busca
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -69,6 +71,10 @@ export default function Proprietarios() {
         });
     };
 
+    const filteredProprietarios = proprietarios.filter((prop) =>
+        prop.nome.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
         <div>
             <Typography variant="h5">🍀 adicionar proprietário</Typography>
@@ -81,18 +87,25 @@ export default function Proprietarios() {
 
             <Divider></Divider>
 
+
             <Typography variant="h5" style={{ marginTop: "2rem" }}>🍂 lista de proprietários</Typography>
+            <TextField
+                label="pesquisar..."
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+            />
             <List>
-                {proprietarios.map((prop) => {
-                    const produtosDoProprietario = produtos.filter(prod => prod.proprietarioId === prop.id);
+                {filteredProprietarios.map((prop) => {
+                    const totalProdutos = produtos.filter((prod) => prod.proprietarioId === prop.id).length;
                     return (
                         <ListItem key={prop.id}>
-                            {produtosDoProprietario.map((prod) => (
-                                <ListItemText
-                                    primary={`#${prop.id} | ${prop.nome} (${prop.email})`}
-                                    secondary={`endereço: ${prop.endereco} | produto(s): ${prod.desc}`}
-                                />
-                            ))}
+                            <ListItemText
+                                primary={`#${prop.id} | ${prop.nome}`}
+                                secondary={`Email: ${prop.email} | Endereço: ${prop.endereco} | Total de Produtos: ${totalProdutos}`}
+                            />
                         </ListItem>
                     );
                 })}
@@ -101,14 +114,19 @@ export default function Proprietarios() {
             <Divider></Divider>
             <Typography variant="h5" style={{ marginTop: "2rem" }}>🔰 estatísticas</Typography>
             {proprietarioMaisProdutos ? (
-                <Typography variant="h6" style={{ marginBottom: "1rem" }}>
-                    Proprietário com Maior Número de Produtos:
-                    <br />
-                    {`#${proprietarioMaisProdutos.id} - ${proprietarioMaisProdutos.nome} | Total de Produtos: ${proprietarioMaisProdutos.totalProdutos}`}
-                </Typography>
+                <List>
+                    <ListItem>
+                        <ListItemText
+                            primary="proprietário com maior número de produtos"
+                            secondary={
+                                `#${proprietarioMaisProdutos.id} - ${proprietarioMaisProdutos.nome} | Total de Produtos: ${proprietarioMaisProdutos.totalProdutos}`
+                            }
+                        />
+                    </ListItem>
+                </List>
             ) : (
                 <Typography variant="body1" style={{ marginBottom: "1rem" }}>
-                    Nenhum dado disponível ainda.
+                    nenhum dado disponível ainda.
                 </Typography>
             )}
 
