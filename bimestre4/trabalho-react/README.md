@@ -11,4 +11,5 @@ cd ../frontend
 npm install react axios @mui/material @emotion/react @emotion/styled web-vitals
 npm install --legacy-peer-deps
 npm install mui-image --force
+npm install react-router-dom --force
 ```
