@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import api from "./Api";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Image from 'mui-image'
+import axios from "axios";
 import {
     Container,
     TextField,
@@ -9,6 +13,32 @@ import {
     ListItem,
     ListItemText,
 } from "@mui/material";
+
+
+const theme = createTheme({
+    palette: {
+        text: {
+            primary: "#199515",
+            secondary: "#2F9F2C",
+        },
+        primary: {
+            main: '#145b11',
+        },
+        secondary: {
+            main: '#145b11',
+        },
+        background: {
+            default: "#000000",
+        },
+        mode: 'dark',
+    },
+  });
+  
+
+// Configuração da instância axios
+const api = axios.create({
+    baseURL: "http://localhost:3001", // URL do backend
+});
 
 function App() {
     const [proprietarios, setProprietarios] = useState([]);
@@ -21,7 +51,7 @@ function App() {
     const [valor, setValor] = useState("");
     const [proprietarioId, setProprietarioId] = useState("");
 
-    // Carregar proprietários e produtos
+    // Carregar proprietários e produtos ao iniciar
     useEffect(() => {
         fetchProprietarios();
         fetchProdutos();
@@ -37,7 +67,6 @@ function App() {
         setNome("");
         setEmail("");
         setEndereco("");
-        setProdutos("");
         fetchProprietarios();
     };
 
@@ -52,61 +81,74 @@ function App() {
         setQtd("");
         setValor("");
         setProprietarioId("");
-        fetchProprietarios();
+        fetchProdutos();
     };
 
     return (
+        <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Container>
-            <Typography variant="h4" style={{ marginTop: "2rem" }}>
-                Proprietários e Produtos
+            <Typography variant="h4" style={{ marginTop: "2rem", marginBottom: "2rem" }} align="center">
+                𝔱𝔯𝔞𝔟𝔞𝔩𝔥𝔬 𝔡𝔬 𝔮𝔲𝔞𝔯𝔱𝔬 𝔟𝔦𝔪𝔢𝔰𝔱𝔯𝔢
             </Typography>
 
-            {/* Adicionar Proprietário */}
-            <Typography variant="h6">Adicionar Proprietário</Typography>
-            <TextField label="Nome" value={nome} onChange={(e) => setNome(e.target.value)} fullWidth margin="normal" />
-            <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
-            <TextField label="Endereço" value={endereco} onChange={(e) => setEndereco(e.target.value)} fullWidth margin="normal" />
-            <TextField label="Produtos" value={produtos} onChange={(e) => setProdutos(e.target.value)} fullWidth margin="normal" />
-            <Button variant="contained" color="primary" onClick={addProprietario}>
-                Adicionar Proprietário
+            {/* Formulário para adicionar Proprietário */}
+            <Divider textAlign="left"><Typography variant="h6">_adicionar proprietário</Typography></Divider>
+            <TextField label="nome" value={nome} onChange={(e) => setNome(e.target.value)} fullWidth margin="normal" />
+            <TextField label="email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
+            <TextField label="endereço" value={endereco} onChange={(e) => setEndereco(e.target.value)} fullWidth margin="normal" />
+            <Button variant="contained" style={{ marginBottom: "3rem" }} color="primary" onClick={addProprietario}>
+                enviar
             </Button>
 
-            {/* Adicionar Produto */}
-            <Typography variant="h6" style={{ marginTop: "2rem" }}>Adicionar Produto</Typography>
-            <TextField label="Descrição" value={desc} onChange={(e) => setDesc(e.target.value)} fullWidth margin="normal" />
-            <TextField label="Quantidade" value={qtd} onChange={(e) => setQtd(e.target.value)} fullWidth margin="normal" />
-            <TextField label="Valor" value={valor} onChange={(e) => setValor(e.target.value)} fullWidth margin="normal" />
-            <TextField label="ID do Proprietário" value={proprietarioId} onChange={(e) => setProprietarioId(e.target.value)} fullWidth margin="normal" />
-            <Button variant="contained" color="secondary" onClick={addProduto}>
-                Adicionar Produto
+            <Image src="zelda-divider-2.png" width={300} style={{ marginBottom: "2rem" }} />
+
+            {/* Formulário para adicionar Produto */}
+            <Divider textAlign="left"><Typography variant="h6">_adicionar produto</Typography></Divider>
+            <TextField label="descrição" value={desc} onChange={(e) => setDesc(e.target.value)} fullWidth margin="normal" />
+            <TextField label="quantidade" value={qtd} onChange={(e) => setQtd(e.target.value)} fullWidth margin="normal" />
+            <TextField label="valor" value={valor} onChange={(e) => setValor(e.target.value)} fullWidth margin="normal" />
+            <TextField label="id do proprietário" value={proprietarioId} onChange={(e) => setProprietarioId(e.target.value)} fullWidth margin="normal" />
+            <Button variant="contained" style={{ marginBottom: "3rem" }} color="secondary" onClick={addProduto}>
+                enviar
             </Button>
 
-            {/* Lista de Proprietários*/}
-            <Typography variant="h5" style={{ marginTop: "2rem" }}>Lista de Proprietários</Typography>
+            <Image src="zelda-divider.png" width={400} />
+
+            {/* Lista de Proprietários */}
+            <Typography variant="h5" style={{ marginTop: "2rem" }}>_lista de proprietários</Typography>
             <List>
-                {proprietarios.map((prop) => (
-                    <ListItem key={prop.id}>
-                        <ListItemText
-                            primary={`#${prop.id} | ${prop.nome} (${prop.email})`}
-                            secondary={`Endereço: ${prop.endereco} | Produtos: ${prop.produtos}`}
-                        />
-                    </ListItem>
-                ))}
+                {proprietarios.map((prop) => {
+                    const produtosDoProprietario = produtos.filter(prod => prod.proprietarioId === prop.id);
+                    return (
+                        <ListItem key={prop.id}>
+                            {produtosDoProprietario.map((prod) => (
+                                <ListItemText
+                                    primary={`#${prop.id} | ${prop.nome} (${prop.email})`}
+                                    secondary={`Endereço: ${prop.endereco} | Produto(s): ${prod.desc}`}
+                                />
+                            ))}
+                        </ListItem>
+                    );
+                })}
             </List>
 
-            {/* Lista de Produtos*/}
-            <Typography variant="h5" style={{ marginTop: "2rem" }}>Lista de Produtos</Typography>
+            <Divider></Divider>
+            
+            {/* Lista de Produtos */}
+            <Typography variant="h5" style={{ marginTop: "2rem" }}>_lista de produtos</Typography>
             <List>
                 {produtos.map((prod) => (
                     <ListItem key={prod.id}>
                         <ListItemText
                             primary={`#${prod.id} | ${prod.desc}`}
-                            secondary={`Valor: ${prod.valor} | Proprietário: ${prod.proprietarioId}`}
+                            secondary={`Valor: R$${prod.valor} | Proprietário: ${prod.proprietarioId}`}
                         />
                     </ListItem>
                 ))}
             </List>
         </Container>
+        </ThemeProvider>
     );
 }
 
